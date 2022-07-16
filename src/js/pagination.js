@@ -1,3 +1,4 @@
+$results_per_page = 20;
 let pageNr = 0;
 let arrayOfPages = [];
 let visibleArrayOfPages;
