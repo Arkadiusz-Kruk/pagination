@@ -46,8 +46,8 @@ function handleChangePage(event) {
     showLoader();
     setEventsOnPage();
     apiService.fetchEvent().then(renderGallery).catch(console.log).finally(hideLoader);
-  })
-}
+  });
+
 
 
 
