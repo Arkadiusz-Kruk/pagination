@@ -39,7 +39,16 @@ function handleChangePage(event) {
   
 };
 
-visiblePages: window.outerWidth < 768 ? 3 : 5,
+  const pagination = new Pagination('pagination', options);
+
+  pagination.on('beforeMove', function (eventData) {
+    apiService.page = eventData.page - 1;
+    showLoader();
+    setEventsOnPage();
+    apiService.fetchEvent().then(renderGallery).catch(console.log).finally(hideLoader);
+  });
+}
+
 
 
 // totalElements = ${page.totalElements} - liczba wszystkich elementów
