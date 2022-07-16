@@ -30,8 +30,6 @@ function changePage(data) {
     let newPage = document.getElementById(i);
     newPage.addEventListener("click", handleChangePage)
   };
-  visiblePages: window.outerWidth < 768 ? 3 : 5,
-
 }
 
 function handleChangePage(event) {
@@ -40,6 +38,9 @@ function handleChangePage(event) {
   console.log(pageNr);
   
 };
+
+visiblePages: window.outerWidth < 768 ? 3 : 5,
+
 
 // totalElements = ${page.totalElements} - liczba wszystkich elementów
 // size = ${page.size} - liczba elementów na stronie
