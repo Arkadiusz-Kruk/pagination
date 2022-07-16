@@ -31,8 +31,7 @@ function changePage(data) {
     newPage.addEventListener("click", handleChangePage)
   };
   visiblePages: window.outerWidth < 768 ? 3 : 5,
-  page: 1,
-  centerAlign: true;
+
 }
 
 function handleChangePage(event) {
