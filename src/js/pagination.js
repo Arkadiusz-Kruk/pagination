@@ -15,9 +15,7 @@ function pagination(data) {
 function renderPagination(data) {
   arrayOfPages = [...Array(data.page.totalPages).keys()]
   // console.log(arrayOfPages);
-      visibleArrayOfPages = arrayOfPages.map((i) =>
-      `<button type="submit" value=${i} id=${i} class=pagination__btn>${i + 1}</button>`).join("");
-  paginationArray.innerHTML = visibleArrayOfPages;
+      visibleArrayOfPages = arrayOfPages.map - 1;
 }
 
 function currentPage(data) {
@@ -38,18 +36,6 @@ function handleChangePage(event) {
   console.log(pageNr);
   
 };
-
-  const pagination = new Pagination('pagination', options);
-
-  pagination.on('beforeMove', function (eventData) {
-    apiService.page = eventData.page - 1;
-    showLoader();
-    setEventsOnPage();
-    apiService.fetchEvent().then(renderGallery).catch(console.log).finally(hideLoader);
-  });
-
-
-
 
 // totalElements = ${page.totalElements} - liczba wszystkich elementów
 // size = ${page.size} - liczba elementów na stronie
