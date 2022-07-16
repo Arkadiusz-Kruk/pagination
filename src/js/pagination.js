@@ -32,8 +32,7 @@ function changePage(data) {
   };
   visiblePages: window.outerWidth < 768 ? 3 : 5,
   page: 1,
-  centerAlign: true,
-  
+  centerAlign: true;
 }
 
 function handleChangePage(event) {
