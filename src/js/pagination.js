@@ -23,13 +23,15 @@ function renderPagination(data) {
 function currentPage(data) {
   const currentPage = document.getElementById(data.page.number);
   currentPage.classList.add("pagination__btn--active");
-   visiblePages: window.outerWidth < 768 ? 3 : 5,
 }
 
-function changePage(data) {
-  for (let i = 0; i < data.page.totalPages; i++) {
-    let newPage = document.getElementById(i);
-    newPage.addEventListener("click", handleChangePage)
+ function setPagination(totalEvents) {
+  const options = {
+    totalItems: totalEvents > 1000 ? 1000 : totalEvents,
+    itemsPerPage: apiService.size,
+    visiblePages: window.outerWidth < 768 ? 3 : 5,
+    page: 1,
+    centerAlign: true,
   };
 }
 
