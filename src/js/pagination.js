@@ -18,12 +18,12 @@ function renderPagination(data) {
       visibleArrayOfPages = arrayOfPages.map((i) =>
       `<button type="submit" value=${i} id=${i} class=pagination__btn>${i + 1}</button>`).join("");
   paginationArray.innerHTML = visibleArrayOfPages;
-  visiblePages: window.outerWidth < 768 ? 3 : 5,
 }
 
 function currentPage(data) {
   const currentPage = document.getElementById(data.page.number);
   currentPage.classList.add("pagination__btn--active");
+   visiblePages: window.outerWidth < 768 ? 3 : 5,
 }
 
 function changePage(data) {
