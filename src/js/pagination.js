@@ -15,8 +15,8 @@ function pagination(data) {
 function renderPagination(data) {
   arrayOfPages = [...Array(data.page.totalPages).keys()]
   // console.log(arrayOfPages);
-      visibleArrayOfPages = arrayOfPages.map((i-1) =>
-      `<button type="submit" value=${i} id=${i} class=pagination__btn>${i +1}</button>`).join("");
+      visibleArrayOfPages = arrayOfPages.map((i) =>
+      `<button type="submit" value=${i} id=${i} class=pagination__btn>${i +1}</button>`).join("")-1;
   paginationArray.innerHTML = visibleArrayOfPages;
 }
 
