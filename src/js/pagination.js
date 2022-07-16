@@ -20,6 +20,16 @@ function renderPagination(data) {
   paginationArray.innerHTML = visibleArrayOfPages;
 }
 
+  pagination.on('beforeMove', function (eventData) {
+    apiService.page = eventData.page - 1;
+    showLoader();
+    setEventsOnPage();
+    apiService.fetchEvent().then(renderGallery).catch(console.log).finally(hideLoader);
+  });
+}
+
+
+
 function currentPage(data) {
   const currentPage = document.getElementById(data.page.number);
   currentPage.classList.add("pagination__btn--active");
