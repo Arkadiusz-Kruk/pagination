@@ -26,7 +26,7 @@ function renderPagination(data) {
     setEventsOnPage();
     apiService.fetchEvent().then(renderGallery).catch(console.log).finally(hideLoader);
   });
-}
+
 
 
 
