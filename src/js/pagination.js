@@ -1,22 +1,3 @@
-import { renderGallery } from "./gallery.js"
-import { renderModal } from "./modal.js"
-import {
-  API_KEY,
-  SIZE,
-  l,
-  pagesChildren,
-  dotsEnd,
-  dotsStart,
-  pages,
-  ql,
-  qla,
-  eventSearch,
-  DEFAULT_API_RESPONSE,
-  country,
-  dropDown,
-  navButton,
-} from "./globalVAR.js"
-
 let page = 0
 let totalPages = 0
 let keyword = ""
@@ -271,3 +252,7 @@ focusOnCurentPage(1)
 // page._embedded.events[0].dates.start.localDate - dzień rozpoczęcia
 // page._embedded.events[0]._embedded.venues.adress.line1 - geo lokalizacja ?
 // page._embedded.events[0]._embedded.venues[0].name - nazwa lokalizacjid ?
+
+
+
+export { pagination, pageNr };
